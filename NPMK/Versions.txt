@@ -449,5 +449,49 @@ NPMK Version 2.8.2.0: 5 May 2014
 %   - Fixed a bug where the response to 1/4 uV warning was not being saved.
 %
 
+***** NPMK Version 5.4.2.0 :October 2, 2020 *****
+%
+% 1.1.0.0: NSxPowerSpectrum: October 2, 2020
+%   - Fixed a bug where the sampling frequency is now read from the header
+%     file instead of it being fixed at 300 Hz.
+% 
+% 7.3.1.0: openNSx: October 2, 2020
+%   - If the units are in µV (openNSx('uv'), ths correct information is now 
+%     written to the electrodes header: 1000 nV (raw). 
+%
 
-LATEST:5.4.1.0
+***** NPMK Version 5.4.3.0 :October 23, 2020 *****
+%
+% 1.1.1.0: NSxPowerSpectrum: October 23, 2020
+%   - Fixed a small bug with double defining the function name.% 
+%
+% 7.3.2.0: openNSx: October 23, 2020
+%   - Fixed a typo.
+%
+% 1.2.0.0: splitNEVNtrode: October 27, 2020
+%   - Removed junk characters from the file.
+%
+
+***** NPMK Version 5.4.4.0 :October 29, 2020 *****
+%
+% 7.4.0.0: openNSx: October 29, 2020
+%   - Undid changes made to AnalogUnit and instead implemented
+%     NSx.ElectrodesInfo.Resolution to show what the resolution of the data
+%     is. By default, the resolution is set to 0.250 µV. If used with
+%     parameter 'uv', the resolution will be 1 µV. To always convert the
+%     data to µV, divide NSx.Data(CHANNEL,:) by
+%     NSx.ElectrodesInfo(CHANNEL).Resolution.
+%
+
+***** NPMK Version 5.4.5.0 :December 4, 2020 *****
+%
+% 1.2.1.0: splitNEVNTrode: November 17, 2020
+%   - Minor bug fixes and general code clean up - @David Kluger
+%
+
+***** NPMK Version 5.5.0.0 :December 17, 2020 *****
+%
+% 1.2.0.0: splitNSx: December 17, 2020
+%   - Updated to add FileSpec 3.0 compatibility. - @David Kluger
+
+LATEST:5.5.0.0
